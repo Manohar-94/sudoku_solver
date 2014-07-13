@@ -1,7 +1,279 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="solver.js">
+ </script>
 </head>
 <body>
+  <h1>The sudoku solver</h1>
+  <div>
+    <form >
+    <table>
+      <tr>
+        <td>
+          <input type="text" id="one" class="first">
+        </td>
+        <td>
+          <input type="text" id="two" class="first">
+        </td>
+        <td>
+          <input type="text" id="three" class="first">
+        </td>
+        <td>
+          <input type="text" id="four" class="second">
+        </td>
+        <td>
+          <input type="text" id="five" class="second">
+        </td>
+        <td>
+          <input type="text" id="six" class="second">
+        </td>
+        <td>
+          <input type="text" id="seven" class="third">
+        </td>
+        <td>
+          <input type="text" id="eight" class="third">
+        </td>
+        <td>
+          <input type="text" id="nine" class="third">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" id="ten" class="first">
+        </td>
+        <td>
+          <input type="text" id="eleven" class="first">
+        </td>
+        <td>
+          <input type="text" id="twelve" class="first">
+        </td>
+        <td>
+          <input type="text" id="thirteen" class="second">
+        </td>
+        <td>
+          <input type="text" id="fourteen" class="second">
+        </td>
+        <td>
+          <input type="text" id="fifteen" class="second">
+        </td>
+        <td>
+          <input type="text" id="sixteen" class="third">
+        </td>
+        <td>
+          <input type="text" id="seventeen" class="third">
+        </td>
+        <td>
+          <input type="text" id="eighteen" class="third">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" id="nineteen" class="first">
+        </td>
+        <td>
+          <input type="text" id="twenty" class="first">
+        </td>
+        <td>
+          <input type="text" id="twenty_one" class="first">
+        </td>
+        <td>
+          <input type="text" id="twenty_two" class="second">
+        </td>
+        <td>
+          <input type="text" id="twenty_three" class="second">
+        </td>
+        <td>
+          <input type="text" id="twenty_four" class="second">
+        </td>
+        <td>
+          <input type="text" id="twenty_five" class="third">
+        </td>
+        <td>
+          <input type="text" id="twenty_six" class="third">
+        </td>
+        <td>
+          <input type="text" id="twenty_seven" class="third">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" id="twenty_eight" class="fourth">
+        </td>
+        <td>
+          <input type="text" id="twenty_nine" class="fourth">
+        </td>
+        <td>
+          <input type="text" id="thirty" class="fourth">
+        </td>
+        <td>
+          <input type="text" id="thirty_one" class="fifth">
+        </td>
+        <td>
+          <input type="text" id="thirty_two" class="fifth">
+        </td>
+        <td>
+          <input type="text" id="thirty_three" class="fifth">
+        </td>
+        <td>
+          <input type="text" id="thirty_four" class="sixth">
+        </td>
+        <td>
+          <input type="text" id="thirty_five" class="sixth">
+        </td>
+        <td>
+          <input type="text" id="thirty_six" class="sixth">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" id="thirty_seven" class="fourth">
+        </td>
+        <td>
+          <input type="text" id="thirty_eight" class="fourth">
+        </td>
+        <td>
+          <input type="text" id="thirty_nine" class="fourth">
+        </td>
+        <td>
+          <input type="text" id="fourty" class="fifth">
+        </td>
+        <td>
+          <input type="text" id="fourty_one" class="fifth">
+        </td>
+        <td>
+          <input type="text" id="fourty_two" class="fifth">
+        </td>
+        <td>
+          <input type="text" id="fourty_three" class="sixth">
+        </td>
+        <td>
+          <input type="text" id="fourty_four" class="sixth">
+        </td>
+        <td>
+          <input type="text" id="fourty_five" class="sixth">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" id="fourty_six" class="fourth">
+        </td>
+        <td>
+          <input type="text" id="fourty_seven" class="fourth">
+        </td>
+        <td>
+          <input type="text" id="fourty_eight" class="fourth">
+        </td>
+        <td>
+          <input type="text" id="fourty_nine" class="fifth">
+        </td>
+        <td>
+          <input type="text" id="fifty" class="fifth">
+        </td>
+        <td>
+          <input type="text" id="fifty_one" class="fifth">
+        </td>
+        <td>
+          <input type="text" id="fifty_two" class="sixth">
+        </td>
+        <td>
+          <input type="text" id="fifty_three" class="sixth">
+        </td>
+        <td>
+          <input type="text" id="fifty_four" class="sixth">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" id="fifty_five" class="seventh">
+        </td>
+        <td>
+          <input type="text" id="fifty_six" class="seventh">
+        </td>
+        <td>
+          <input type="text" id="fifty_seven" class="seventh">
+        </td>
+        <td>
+          <input type="text" id="fifty_eight" class="eighth">
+        </td>
+        <td>
+          <input type="text" id="fifty_nine" class="eighth">
+        </td>
+        <td>
+          <input type="text" id="sixty" class="eighth">
+        </td>
+        <td>
+          <input type="text" id="sixty_one" class="ninth">
+        </td>
+        <td>
+          <input type="text" id="sixty_two" class="ninth">
+        </td>
+        <td>
+          <input type="text" id="sixty_three" class="ninth">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" id="sixty_four" class="seventh">
+        </td>
+        <td>
+          <input type="text" id="sixty_five" class="seventh">
+        </td>
+        <td>
+          <input type="text" id="sixty_six" class="seventh">
+        </td>
+        <td>
+          <input type="text" id="sixty_seven" class="eighth">
+        </td>
+        <td>
+          <input type="text" id="sixty_eight" class="eighth">
+        </td>
+        <td>
+          <input type="text" id="sixty_nine" class="eighth">
+        </td>
+        <td>
+          <input type="text" id="seventy" class="ninth">
+        </td>
+        <td>
+          <input type="text" id="seventy_one" class="ninth">
+        </td>
+        <td>
+          <input type="text" id="seventy_two" class="ninth">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" id="seventy_three" class="seventh">
+        </td>
+        <td>
+          <input type="text" id="seventy_four" class="seventh">
+        </td>
+        <td>
+          <input type="text" id="seventy_five" class="seventh">
+        </td>
+        <td>
+          <input type="text" id="seventy_six" class="eighth">
+        </td>
+        <td>
+          <input type="text" id="seventy_seven" class="eighth">
+        </td>
+        <td>
+          <input type="text" id="seventy_eight" class="eighth">
+        </td>
+        <td>
+          <input type="text" id="seventy_nine" class="ninth">
+        </td>
+        <td>
+          <input type="text" id="eighty" class="ninth">
+        </td>
+        <td>
+          <input type="text" id="eighty_one" class="ninth">
+        </td>
+      </tr>
+    </table>
+    <input type="submit" value="submit" name="submit" onclick="solver()">
+    </form>
+  </div>
 </body>
 </html>
