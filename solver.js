@@ -19,8 +19,8 @@ function solver(){
                 ["sixty_four","sixty_five","sixty_six","sixty_seven","sixty_eight","sixty_nine","seventy","seventy_one","seventy_two"],
                 ["seventy_three","seventy_four","seventy_five","seventy_six","seventy_seven","seventy_eight","seventy_nine","eighty","eighty_one"]];
   
-  var count=0,common=0;
-  var rows[9],columns[9],boxes[3][3],rowcount=0,colcount=0,num[9]=[1,2,3,4,5,6,7,8,9];
+  var count=0,common;
+  var rows[9],columns[9],boxes[3][3],rowcount,colcount,num[9];
 
   for(var i=0;i<9;i++){
     for(var j=0;j<9;j++){
@@ -36,7 +36,10 @@ function solver(){
     for (var i=0;i<9;i++){
       for(var j=0;j<9;j++){
         if(sudoku[i][j]==0){
-
+          common=0;
+          rowcount=0;
+          colcount=0;
+          num[9]=[1,2,3,4,5,6,7,8,9];
 //rows,columns,boxes
 
           for(var k=0;k<9;k++){
